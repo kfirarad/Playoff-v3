@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap");
+
+.App {
+  font-family: "Rubik", ans-serif;
+  font-weight: 300;
+  text-align: center;
+  direction: rtl;
+}
+
+#table {
+  .table {
+    width: 100%;
+    border: 1px solid black;
+    border-spacing: 0;
+    display: flex;
+    flex-direction: column;
+    .row {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content:space-around;
+      border: 1px solid black;
+
+      .col,.head-col {
+        margin: 0;
+        padding: 1%;
+        width: 20%;
+        text-align: center;
+      }
+    }
+    .row:not(.head-row) {
+      &:nth-child(even) {
+        background: rgb(211, 211, 211, 0.3);
+      }
+    }
+    .top-4 {
+      background: #fff;
+      z-index:999;
+      .row {
+        &:nth-child(2) {
+          background: rgb(0, 140, 255, 0.8);
+          color: #fff;
+        }
+        &:nth-child(1) {
+          background: rgb(0, 140, 255, 0.6);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.small-col {
+  width: 15%;
+}
+
+#fixtures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+
+
+  table {
+    min-width: 240px;
+    border: 1px solid black;
+    border-spacing: 0;
+
+    td,
+    th {
+      border-bottom: 1px solid black;
+      margin: 0;
+      height: 40px;      
+      input {
+        border: rgb(211, 211, 211) 1px solid;
+        width: 12px;
+        text-align: center;
+        font-size: 22px;
+        margin: 0 4px;
+      }
+      input:invalid {
+        border-color: rgb(255, 41, 41);
+      }
+    }
+  }
+}
+
+.bold {
+  font-weight: bold;
+  background: #008bff;
+  color: #fff;
+}
+
+.done {
+  color: rgb(0, 255, 0);
+}
+button {
+  margin: 10px;
+  padding: 10px;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  color: #fff;
+  background: linear-gradient(180deg, #4b91f7 0%, #367af6 100%);
+  background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
+    inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2),
+    0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
+    0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+.gf {
+  direction: ltr;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.switch {
+  z-index: -1;
+}

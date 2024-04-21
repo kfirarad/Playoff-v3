@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "env"
+  ],
+  "plugins": [
+    "transform-runtime",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ]
+  ]
+}
